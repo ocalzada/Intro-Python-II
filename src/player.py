@@ -2,7 +2,8 @@
 # currently.
 
 class Player:
-    def __init__(self, name, room, age):
-        self.name = input("Enter your Adventure name: ")
-        self.room = room
-        self.age = age
+    def __init__(self, name, starting_room):
+        self.name = name
+        self.current_room = starting_room
+    # def travel(self, direction):
+    #     self.direction = direction

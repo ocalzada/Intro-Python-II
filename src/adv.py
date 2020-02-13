@@ -61,4 +61,9 @@ directions = ['n', 's', 'e', 'w']
 while True:
     cmd = input('Enter Direction ~~> ').lower()
     if cmd in directions:
-        player1.travel(cmd)
+        player1.travel(cmd) 
+    elif cmd == 'q':
+        print('Quitting Game')
+        break
+    else:
+        print('INVALID')

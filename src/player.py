@@ -5,5 +5,10 @@ class Player:
     def __init__(self, name, starting_room):
         self.name = name
         self.current_room = starting_room
-    # def travel(self, direction):
-    #     self.direction = direction
+    def travel(self, direction):
+        next_room = self.current_room.destination_room(direction)
+        if next_room is not None:
+            self.current_room = next_room
+            print(self.current_room)
+        else:
+            print('Move Not Allowed')
